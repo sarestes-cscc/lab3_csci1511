@@ -38,4 +38,10 @@ class WordAnalyzer:
                 if word in self.word_count:
                     counter += 1
                     self.word_count["count"] = counter
-            
+            return self.word_count
+
+    def print_report(self):
+        """Prints the word counter results"""
+        sorted_word_count = dict(sorted(self.word_count.items()))
+        for key, value in sorted_word_count:
+            print(f"{key} :: {value}")
