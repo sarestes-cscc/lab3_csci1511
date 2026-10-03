@@ -25,20 +25,17 @@ class WordAnalyzer:
             print(f"I'm sorry, {file_path} was not found.")
             return
         
-        contents = path.open()
-        for line in contents:
-            line = line.translate(str.maketrans('', '', string.punctuation))
-            line = line.lower()
-            return line 
-
-            words = contents.split()
-            counter = 0
-            for word in words:
-                self.word_count["word"] = word
-                if word in self.word_count:
-                    counter += 1
-                    self.word_count["count"] = counter
-            return self.word_count
+        alter_text = contents.translate(str.maketrans('', '', string.punctuation))
+        alter_text = alter_text.lower()
+        words = contents.split()
+        
+        counter = 0
+        for word in words:
+            self.word_count["word"] = word
+            if word in self.word_count:
+                counter += 1
+                self.word_count["count"] = counter
+        return self.word_count
 
     def print_report(self):
         """Prints the word counter results"""
