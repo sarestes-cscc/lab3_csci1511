@@ -36,6 +36,7 @@ class WordAnalyzer:
 
     def print_report(self):
         """Prints the word counter results"""
-        sorted_word_count = dict(sorted(self.word_count.items()))
+        sorted_word_count = sorted(self.word_count.items())
+
         for key, value in sorted_word_count.items():
             print(f"{key} :: {value}")
