@@ -14,3 +14,5 @@ text_options = {
     "5": "Exit",
 }
 
+for option, text in text_options.items():
+    print(f"{option}: '{text}'")
