@@ -3,7 +3,7 @@ main() function
 
 """
 
-print ("--- Word Analyzer ---")
+print ("\n--- Word Analyzer ---")
 print("Please select a file to analyze:")
 
 text_options = {
@@ -16,3 +16,23 @@ text_options = {
 
 for option, text in text_options.items():
     print(f"{option}: '{text}'")
+
+while True:
+    user_choice = input("\nEnter your choice (1-6): ")
+
+    if user_choice == "1":
+        file_path = "monte_cristo.txt"
+
+    if user_choice == "2":
+        file_path = "princess_mars.txt"
+
+    if user_choice == "3":
+        file_path = "Tarzan.txt"
+
+    if user_choice == "4":
+        file_path = "treasure_island.txt"
+
+    if user_choice == "5":
+        break
+
+    print(f"\nProcessing '{file_path}'")
