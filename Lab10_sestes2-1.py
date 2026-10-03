@@ -4,9 +4,6 @@ main() function
 """
 from word_analyzer import WordAnalyzer
 
-print ("\n--- Word Analyzer ---")
-print("Please select a file to analyze:")
-
 text_options = {
     "1": "The Count of Monte Cristo",
     "2": "A Princess of Mars",
@@ -15,15 +12,16 @@ text_options = {
     "5": "Exit",
 }
 
-for option, text in text_options.items():
-    print(f"{option}: '{text}'")
-
 while True:
+    print ("\n--- Word Analyzer ---")
+    print("Please select a file to analyze:")
+    for option, text in text_options.items():
+        print(f"{option}: '{text}'")
+    
     user_choice = input("\nEnter your choice (1-6): ")
 
-    for option in text_options.keys():
-        if user_choice != option:
-            print("Invalid input. Please re-enter choice.")
+    if user_choice not in text_options:
+        print("Invalid input. Please re-enter choice.")
         
     if user_choice == "1":
         file_path = "monte_cristo.txt"
