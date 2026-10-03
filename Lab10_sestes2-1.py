@@ -21,6 +21,10 @@ for option, text in text_options.items():
 while True:
     user_choice = input("\nEnter your choice (1-6): ")
 
+    for option in text_options.keys():
+        if user_choice != option:
+            print("Invalid input. Please re-enter choice.")
+        
     if user_choice == "1":
         file_path = "monte_cristo.txt"
         print(f"\nProcessing '{file_path}'")
@@ -52,5 +56,4 @@ while True:
     if user_choice == "5":
         break
 
-    else:
-        print("Invalid input. Please retry.")
+print("Goodbye!")
