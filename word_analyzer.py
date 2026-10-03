@@ -38,5 +38,5 @@ class WordAnalyzer:
         """Prints the word counter results"""
         sorted_word_count = sorted(self.word_count.items())
 
-        for key, value in sorted_word_count.items():
+        for key, value in sorted_word_count:
             print(f"{key} :: {value}")
