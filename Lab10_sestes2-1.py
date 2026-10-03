@@ -2,6 +2,7 @@
 main() function 
 
 """
+from word_analyzer import WordAnalyzer
 
 print ("\n--- Word Analyzer ---")
 print("Please select a file to analyze:")
@@ -22,17 +23,30 @@ while True:
 
     if user_choice == "1":
         file_path = "monte_cristo.txt"
+        print(f"\nProcessing '{file_path}'")
+        WordAnalyzer.process_file("monte_cristo.txt")
+        WordAnalyzer.print_report()
 
     if user_choice == "2":
         file_path = "princess_mars.txt"
+        print(f"\nProcessing '{file_path}'")
+        WordAnalyzer.process_file("princess_mars.txt")
+        WordAnalyzer.print_report()
 
     if user_choice == "3":
         file_path = "Tarzan.txt"
+        print(f"\nProcessing '{file_path}'")
+        WordAnalyzer.process_file("Tarzan.txt")
+        WordAnalyzer.print_report()
 
     if user_choice == "4":
         file_path = "treasure_island.txt"
+        print(f"\nProcessing '{file_path}'")
+        WordAnalyzer.process_file("treasure_islant.txt")
+        WordAnalyzer.print_report()
 
     if user_choice == "5":
         break
 
-    print(f"\nProcessing '{file_path}'")
+    else:
+        print("Invalid input. Please retry.")
