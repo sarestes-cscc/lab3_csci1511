@@ -29,7 +29,10 @@ class WordAnalyzer:
         words = contents.split()
         
         for word in words:
-
+            if word in self.word_count:
+                self.word_count[word] += 1
+            else:
+                self.word_count[word] = 1
 
     def print_report(self):
         """Prints the word counter results"""
