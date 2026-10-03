@@ -18,9 +18,8 @@ class WordAnalyzer:
 
     def process_file(self, file_path):
         """Contains the program's main logic"""
-        path = Path(file_path)
         try:
-            contents = self.path.read_text(encoding="utf-8")
+            contents = self.file_path.read_text(encoding="utf-8")
         except FileNotFoundError:
             print(f"I'm sorry, {file_path} was not found.")
             return
@@ -29,13 +28,8 @@ class WordAnalyzer:
         alter_text = alter_text.lower()
         words = contents.split()
         
-        counter = 0
         for word in words:
-            self.word_count["word"] = word
-            if word in self.word_count:
-                counter += 1
-                self.word_count["count"] = counter
-        return self.word_count
+
 
     def print_report(self):
         """Prints the word counter results"""
