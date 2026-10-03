@@ -23,13 +23,13 @@ class WordAnalyzer:
             contents = self.path.read_text(encoding="utf-8")
         except FileNotFoundError:
             print(f"I'm sorry, {file_path} was not found.")
+            return
         
-        if path.exists():
-            contents = path.open()
-            for line in contents:
-                line = line.translate(str.maketrans('', '', string.punctuation))
-                line = line.lower()
-                return line 
+        contents = path.open()
+        for line in contents:
+            line = line.translate(str.maketrans('', '', string.punctuation))
+            line = line.lower()
+            return line 
 
             words = contents.split()
             counter = 0
