@@ -20,7 +20,7 @@ class WordAnalyzer:
         """Contains the program's main logic"""
         path = Path(file_path)
         try:
-            contents = path.read_text()
+            contents = self.path.read_text(encoding="utf-8")
         except FileNotFoundError:
             print(f"I'm sorry, {file_path} was not found.")
         
