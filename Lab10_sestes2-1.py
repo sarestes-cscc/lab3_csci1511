@@ -1,5 +1,9 @@
 """
-main() function 
+Word Analyzer Module
+Sarah Estes
+To analyze words and word count in different text files.
+WordAnalyzer Class used from same directory
+9/30/26
 
 """
 from word_analyzer import WordAnalyzer
@@ -12,6 +16,8 @@ text_options = {
     "5": "Exit",
 }
 
+# Taking user choice from input and assigning the file 
+# name to user choice to use with method calls
 while True:
     print ("\n--- Word Analyzer ---")
     print("Please select a file to analyze:")
